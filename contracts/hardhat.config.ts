@@ -1,4 +1,15 @@
 import "@nomiclabs/hardhat-waffle";
+// require('@nomiclabs/hardhat-waffle');
+// require('@nomiclabs/hardhat-ethers');
+// require('@nomiclabs/hardhat-etherscan'); // contract verification service.
+// require('hardhat-spdx-license-identifier');
+// require('hardhat-gas-reporter');
+// require('hardhat-deploy');
+// require('hardhat-deploy-ethers');
+// require('solidity-coverage');
+
+import 'hardhat-deploy'
+
 import dotenv from 'dotenv';
 
 dotenv.config({ path: '.env' });
@@ -9,6 +20,12 @@ export default {
   defaultNetwork: "hardhat",
   networks: {
     hardhat: {
+    },
+    bscTest: {
+      url: 'https://data-seed-prebsc-1-s1.binance.org:8545',
+      saveDeployments: true,
+      tags: ['bscTest'],
+      // accounts: getAccounts(),
     },
     testnet: {
       url: 'https://babel-api.testnet.iotex.io',
@@ -23,7 +40,24 @@ export default {
       chainId: 4689,
       gas: 8500000,
       gasPrice: 1000000000000
-    }
+    },
+    kovan: {
+      url: 'https://kovan.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
+      saveDeployments: true,
+      tags: ['kovan'],
+      // accounts: getAccounts(),
+    },
+  },
+  gasReporter: {
+    enabled: false,
+    showTimeSpent: true,
+  },
+  spdxLicenseIdentifier: {
+    overwrite: true,
+    runOnCompile: true,
+  },
+  etherscan: {
+    apiKey: process.env.API_KEY,
   },
   solidity: {
     version: "0.7.3",

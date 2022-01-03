@@ -6,9 +6,12 @@
     "esModuleInterop": true,
     "outDir": "dist",
     "resolveJsonModule": true,
-    "declaration": true,
-    "sourceMap": true
-  },
-  "include": ["./scripts", "./test"],
+    "baseUrl": "./"
+},
+"include": [
+    "./scripts",
+    "./test",
+    "./deploy"
+],
   "files": ["./hardhat.config.ts"]
 }

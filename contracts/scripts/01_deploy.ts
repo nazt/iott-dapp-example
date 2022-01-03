@@ -1,10 +1,11 @@
 import _ from "lodash"
 import fs from "fs-extra"
 import { ethers } from "hardhat"
-import { BN } from "bn.js"
+// import { BN } from "bn.js"
+import BN = require("bn.js")
 
 async function main() {
-  const [ owner ] = await ethers.getSigners()
+  const [owner] = await ethers.getSigners()
 
   const Application = await ethers.getContractFactory("Application")
   const app = await Application.deploy()
@@ -47,6 +48,7 @@ async function main() {
   const Token = await ethers.getContractFactory("Token")
   const token = await Token.deploy('PBG', 'PBG', 18)
   await token.deployed()
+
 
   tx = await token.mint(pebble.address, new BN("100000000000000000000000000").toString())
   await tx.wait()
