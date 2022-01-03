@@ -2,16 +2,6 @@
 
 # 1. Development Guide
 
-## 1.1 Environment
-
-In this document, I depoly the system on Ubuntu 20.04 LTS. If you are using any other OS, only a slight adjustment is needed.
-
-## 1.2 Install Node v14
-```
-curl -sL https://deb.nodesource.com/setup_14.x | sudo bash
-sudo yum install nodejs
-```
-
 ## 1.3 Configuration file
 Create .env under root directory as below,
 ```
