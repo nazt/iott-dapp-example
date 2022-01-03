@@ -12,14 +12,14 @@ export default {
     },
     testnet: {
       url: 'https://babel-api.testnet.iotex.io',
-      accounts: [ PRIVATE_KEY ],
+      accounts: [PRIVATE_KEY],
       chainId: 4690,
       gas: 8500000,
       gasPrice: 1000000000000
     },
     mainnet: {
       url: 'https://babel-api.mainnet.iotex.io',
-      accounts: [ PRIVATE_KEY ],
+      accounts: [PRIVATE_KEY],
       chainId: 4689,
       gas: 8500000,
       gasPrice: 1000000000000
