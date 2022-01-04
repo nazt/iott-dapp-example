@@ -68,5 +68,12 @@ export default {
       },
       evmVersion: "petersburg"
     }
-  }
+  },
+  namedAccounts: {
+    deployer: 0,
+  },
 };
+
+
+// https://github.com/wighawag/tutorial-hardhat-deploy
+// https://github.com/protokol/solidity-typescript-hardhat-template

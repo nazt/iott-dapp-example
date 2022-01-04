@@ -7,7 +7,12 @@ const { verifyContract } = require("./utils")
 
 const name = "Oracle"
 
-console.log(".......")
+//  npx hardhat run scripts/12_Oracle.js --network mainnet
+//  hh run scripts/12_Oracle.js
+//  hh run scripts/12_Oracle.js
+//  hh run scripts/12_Oracle.js
+//  npx hardhat run scripts/12_Oracle.js --network mainnet
+
 module.exports = async ({ getNamedAccounts, deployments: any }) => {
   const { deploy } = deployments
   const { deployer } = await getNamedAccounts()
