@@ -17,7 +17,7 @@ module.exports = async ({ getNamedAccounts, deployments: any }) => {
   const { deploy } = deployments
   const { deployer } = await getNamedAccounts()
 
-  console.log(".......")
+  console.log(".......", deploy, deployer)
 
   const args = []
 
@@ -28,7 +28,7 @@ module.exports = async ({ getNamedAccounts, deployments: any }) => {
     log: true,
   })
 
-  // await verifyContract(tx.address, args);
+  await verifyContract(tx.address, args)
 }
 
 module.exports.tags = [name]

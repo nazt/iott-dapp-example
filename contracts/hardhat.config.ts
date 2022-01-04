@@ -25,7 +25,7 @@ export default {
       url: 'https://data-seed-prebsc-1-s1.binance.org:8545',
       saveDeployments: true,
       tags: ['bscTest'],
-      // accounts: getAccounts(),
+      accounts: [PRIVATE_KEY],
     },
     testnet: {
       url: 'https://babel-api.testnet.iotex.io',
@@ -45,7 +45,7 @@ export default {
       url: 'https://kovan.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
       saveDeployments: true,
       tags: ['kovan'],
-      // accounts: getAccounts(),
+      accounts: [PRIVATE_KEY],
     },
   },
   gasReporter: {
