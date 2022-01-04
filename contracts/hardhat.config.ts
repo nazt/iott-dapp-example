@@ -37,6 +37,7 @@ export default {
     mainnet: {
       url: 'https://babel-api.mainnet.iotex.io',
       accounts: [PRIVATE_KEY],
+      timeout: 3 * 20000,
       chainId: 4689,
       gas: 8500000,
       gasPrice: 1000000000000
@@ -64,7 +65,7 @@ export default {
     settings: {
       optimizer: {
         enabled: true,
-        runs: 10000
+        runs: 200
       },
       evmVersion: "petersburg"
     }

@@ -4,12 +4,17 @@ import { ethers } from "hardhat"
 // import { BN } from "bn.js"
 import BN = require("bn.js")
 
+const { verifyContract } = require("../deploy/utils")
+
 async function main() {
   const [owner] = await ethers.getSigners()
 
   const Application = await ethers.getContractFactory("Application")
   const app = await Application.deploy()
   await app.deployed()
+
+  // verifyContract(app.address, [])
+
 
   console.log(`APP_CONTRACT=${app.address}`)
 
@@ -29,6 +34,7 @@ async function main() {
   console.log(`REGISTRATION_CONTRACT=${registration.address}`)
 
   const Pebble = await ethers.getContractFactory('Pebble')
+  console.log(bank.address, registration.address, Pebble.bytecode)
   const pebble = await Pebble.deploy(bank.address, registration.address)
   await pebble.deployed()
 
