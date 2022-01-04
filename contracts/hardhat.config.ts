@@ -77,3 +77,4 @@ export default {
 
 // https://github.com/wighawag/tutorial-hardhat-deploy
 // https://github.com/protokol/solidity-typescript-hardhat-template
+// yarn hardhat --network rinkeby etherscan-verify --api-key <api-key>
