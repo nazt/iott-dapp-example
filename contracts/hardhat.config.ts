@@ -1,12 +1,12 @@
 import "@nomiclabs/hardhat-waffle";
-// require('@nomiclabs/hardhat-waffle');
-// require('@nomiclabs/hardhat-ethers');
-// require('@nomiclabs/hardhat-etherscan'); // contract verification service.
-// require('hardhat-spdx-license-identifier');
-// require('hardhat-gas-reporter');
-// require('hardhat-deploy');
-// require('hardhat-deploy-ethers');
-// require('solidity-coverage');
+require('@nomiclabs/hardhat-waffle');
+require('@nomiclabs/hardhat-ethers');
+require('@nomiclabs/hardhat-etherscan'); // contract verification service.
+require('hardhat-spdx-license-identifier');
+require('hardhat-gas-reporter');
+require('hardhat-deploy');
+require('hardhat-deploy-ethers');
+require('solidity-coverage');
 
 import 'hardhat-deploy'
 
