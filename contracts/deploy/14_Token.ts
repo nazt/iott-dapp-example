@@ -12,6 +12,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
         args: [tokenOwner],
         log: true,
     });
+
 };
 export default func;
 func.tags = ['Token'];

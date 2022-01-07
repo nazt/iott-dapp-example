@@ -7,6 +7,8 @@ require('hardhat-gas-reporter');
 require('hardhat-deploy');
 require('hardhat-deploy-ethers');
 require('solidity-coverage');
+// require('./hardhat')
+import "@typechain/hardhat";
 
 import 'hardhat-deploy'
 
@@ -61,7 +63,7 @@ export default {
     apiKey: process.env.API_KEY,
   },
   solidity: {
-    version: "0.7.3",
+    version: "0.8.4",
     settings: {
       optimizer: {
         enabled: true,
@@ -72,6 +74,10 @@ export default {
   },
   namedAccounts: {
     deployer: 0,
+  },
+  typechain: {
+    outDir: "typechain",
+    target: "ethers-v5",
   },
 };
 
