@@ -10,10 +10,11 @@
     "baseUrl": "./"
 },
 "include": [
-    // "./hardhat.config.ts",
     "./scripts",
     "./test",
-    "./deploy"
+    "./deploy",
+    "./hardhat",
+    "./hardhat/tasks"
 ],
   "files": ["./hardhat.config.ts"]
 }
