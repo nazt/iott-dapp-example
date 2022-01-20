@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.7.3;
+pragma solidity ^0.8.3;
 
 // import OpenZeppelin Ownable
 import "@openzeppelin/contracts/access/Ownable.sol";
+// import "@openzeppelin/contracts/access/Ownable.sol";
 
 import "./Oracle.sol";
 
 contract Device is Ownable {
-
     Oracle public immutable oracle;
     uint256 public immutable idx;
     uint256 private exchangeRate;
